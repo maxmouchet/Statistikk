@@ -1,0 +1,7 @@
+name = "Statistikk"
+uuid = "b2df20ec-1dc9-4c70-9a34-3aba712a2ea4"
+authors = ["Maxime Mouchet <max@maxmouchet.com>"]
+version = "0.1.0"
+
+[deps]
+Distributions = "31c24e10-a181-5473-b8eb-7969acd0382f"
