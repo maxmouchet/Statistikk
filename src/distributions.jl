@@ -21,3 +21,5 @@ function rand(d::UnnormalizedCategorical)
     end
     Tuple(CartesianIndices(size(d.p))[max(1,i)])
 end
+
+rand(d::UnnormalizedCategorical, n::Int) = map(_ -> rand(d), 1:n)
