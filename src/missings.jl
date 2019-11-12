@@ -1,5 +1,14 @@
-pdf(::Distribution, ::Missing) = 1.0
+function enablemissing(val = missing)
+    Base.eval(Distributions, :(pdf(::Distribution, ::Missing) = $val))
+    Base.eval(Distributions, :(logpdf(::Distribution, ::Missing) = log($val)))
+    Base.eval(Distributions, :(zval(::Normal, ::Missing) = log($val)))
+end
 
-logpdf(::Distribution, ::Missing) = 0.0
-
-zval(::Normal, ::Missing) = 0.0
+function disablemissing()
+    try
+        Base.delete_method(@which pdf(Normal(), missing))
+        Base.delete_method(@which logpdf(Normal(), missing))
+        Base.delete_method(@which zval(Normal(), missing))
+    catch
+    end
+end
