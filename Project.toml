@@ -1,7 +1,7 @@
 name = "Statistikk"
 uuid = "b2df20ec-1dc9-4c70-9a34-3aba712a2ea4"
 authors = ["Maxime Mouchet <max@maxmouchet.com>"]
-version = "0.1.0"
+version = "0.1.1"
 
 [deps]
 ConjugatePriors = "1624bea9-42b1-5fc1-afd3-e96f729c8d6c"
