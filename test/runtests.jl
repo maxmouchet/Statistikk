@@ -26,3 +26,10 @@ end
     Statistikk.enablemissing()
     @test_nowarn f(Normal(), missing)
 end
+
+@testset "Vector" begin
+    d = Normal()
+    X = rand(d, 1000)
+    @test pdf(d, X) == pdf.(d, X)
+    @test logpdf(d, X) == logpdf.(d, X)
+end

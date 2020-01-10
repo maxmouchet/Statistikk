@@ -2,6 +2,7 @@ function enablemissing(val = missing)
     Base.eval(Distributions, :(pdf(::Distribution, ::Missing) = $val))
     Base.eval(Distributions, :(logpdf(::Distribution, ::Missing) = log($val)))
     Base.eval(Distributions, :(zval(::Normal, ::Missing) = log($val)))
+    nothing
 end
 
 function disablemissing()
