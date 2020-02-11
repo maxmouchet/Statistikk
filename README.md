@@ -1,5 +1,3 @@
-# *Statistikk*al grab-bag
-
 **Deserialization**
 
 ```julia
